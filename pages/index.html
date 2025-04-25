@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - SmartSphere</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABaUlEQVR4nO2WPU7DQBCFP4nIJfSUgRtAqEIA5SRwGOLwEy4AgksgJEoQHan4OQEOFS7pwGikibCcjT22F4rITxrJGr9987y7nl1o8IsAGAITIAJCzf2bbggkmZBcXZh1Jw7iuwcDZt3IQXzzYMCsGzqIAw8GzLqBkqM/2IReddeBM+ARiDXkeQSseTDMdJqyaAGnwJdjSqch746Va9U1EUXwNqdwNm4cJmoZGJYoPu9fL20gyZnmS2AbWNaQ56uC5TEbuM8Z/AH0csbuKGfe+DsqYJwS6GhuFbjQjiad7lxzgq0UX8bWRpwS7AIbwBOwD6xoHGhuE+in+LFvA4mGFMqi4+B5MTB2CHfVxHPqy/ccvEpL8FDiV9vV4t9GvmzwQiQloq+bzmqgciMKKzSiQ4OuEy5iS9urtfi171aMCh4ZDiOZrSVmYTZQhLaeiq/Ap8YLcKLvKiNobsXMrmlzKx5QH4t3K14s/AAi2ktEynyiEwAAAABJRU5ErkJggg==" type="image/png">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite; /* Animación suave */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between; /* Cambia de center a space-between */
+            align-items: center;
+            padding: 20px;
+            background: #000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-container {
+            background: rgba(0, 0, 0, 0.6); /* Fondo translúcido */
+            padding: 10px;
+            border-radius: 10px; /* Bordes redondeados */
+            display: inline-block; /* Ajusta el tamaño al contenido */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+            margin-left: 20px; /* Agrega un margen para separarlo del borde izquierdo */
+        }
+
+        .logo-container img {
+            max-height: 80px; /* Ajusta el tamaño máximo */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Sombra para resaltar */
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative; /* Necesario para el pseudo-elemento ::after */
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; /* Ubicación de la barra debajo del texto */
+            left: 0;
+            width: 0;
+            height: 2px; /* Altura de la barra */
+            background-color: #e8491d; /* Color de la barra */
+            transition: width 0.3s ease; /* Animación suave */
+        }
+
+        nav a:hover {
+            color: #e8491d;
+        }
+
+        nav a:hover::after {
+            width: 100%; /* La barra se expande completamente al pasar el cursor */
+        }
+
+        .hero-section {
+            background-image: url('../src/assets/images/6746e22dd4f4aaba023bda85_El-Internet-de-las-Cosas-y-su-aplicacion-en-el-hogar.png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-section h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        section {
+            margin: 50px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #e8491d;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e8491d;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .cta-button:hover {
+            background-color: #c73e17;
+            transform: scale(1.05);
+        }
+
+        .why-us {
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 250px;
+        }
+
+        .feature i {
+            font-size: 2rem;
+            color: #e8491d;
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .feature p {
+            font-size: 1rem;
+        }
+
+        #backgroundCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Detrás del contenido */
+        }
+
+        .animated-image-section {
+            position: relative;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 1.5s ease, opacity 1.5s ease;
+            opacity: 0;
+            transform: scale(1.2);
+            animation: fadeInMove 2s forwards;
+        }
+
+        @keyframes fadeInMove {
+            0% {
+                opacity: 0;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeInText 2s ease 1.5s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .text-overlay h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .text-overlay p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="../src/assets/images/smartsphere-logo.png" alt="SmartSphere Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="payments.html">Planes</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="hero-section">
+                <div class="text-content">
+                    <h2>SmartSphere</h2>
+                    <p>Ofrecemos soluciones de IoT de vanguardia que mejoran la conectividad y mejoran vidas.</p>
+                    <a href="services.html" class="cta-button">Descubre nuestros servicios</a>
+                </div>
+            </section>
+            <section class="animated-image-section">
+                <div class="image-container">
+                    <img src="../src/assets/images/casa io.jpg" alt="Casa IoT">
+                    <div class="text-overlay">
+                        <h2>Conecta tu hogar con IoT</h2>
+                        <p>Transforma tu espacio en un hogar inteligente con nuestras soluciones innovadoras.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="why-us">
+                <h2>¿Por qué elegirnos?</h2>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Innovación</h3>
+                        <p>Nuestro equipo utiliza las últimas tecnologías para ofrecer soluciones únicas.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Soporte</h3>
+                        <p>Estamos disponibles 24/7 para ayudarte con cualquier problema.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Seguridad</h3>
+                        <p>Garantizamos la protección de tus datos y dispositivos.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Conéctate con nosotros:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=61575731127398" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/smartsphere_home/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://www.tiktok.com/@yourcompany" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+            </ul>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">&copy; 2025 SmartSphere. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

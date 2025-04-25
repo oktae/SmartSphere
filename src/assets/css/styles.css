@@ -1,0 +1,304 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Tesla-inspired styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container {
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e8491d;
+}
+
+main {
+    padding: 50px 20px;
+}
+
+section {
+    margin: 50px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 250px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e8491d;
+}
+
+footer p.copyright {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr); /* 13 columnas */
+    grid-template-rows: repeat(13, 1fr);   /* 13 filas */
+    pointer-events: none; /* Evita que interfiera con los clics */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(0.75);
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+}
+
+.content-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.animated-image {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeInRight 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-image: url('C:/Users/INKIE/Desktop/iot-company-website-1/src/6746e22dd4f4aaba023bda85_El-Internet-de-las-Cosas-y-su-aplicacion-en-el-hogar.png');
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    color: #fff; /* Asegura que el texto sea legible sobre el fondo */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Agrega espacio interno */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Agrega un overlay oscuro para mejorar la legibilidad del texto */
+    z-index: 0; /* Coloca el overlay detrás del contenido */
+}
+
+.hero-section .text-content {
+    position: relative;
+    z-index: 1; /* Asegura que el texto esté por encima del overlay */
+    max-width: 800px; /* Limita el ancho del texto */
+}
+
+.animated-logo {
+    max-width: 500px;
+    animation: fadeInUp 1s ease-in-out forwards; /* Añadido 'forwards' para que quede estático */
+}
+
+/* Estilo para el contenedor del GIF */
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.gif-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transición más suave */
+}
+
+.gif-container img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el zoom */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Sombra más intensa */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hover-gif {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-gif:hover {
+    transform: scale(1.05); /* Zoom suave */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra atractiva */
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .feature {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
