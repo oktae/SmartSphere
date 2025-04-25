@@ -140,4 +140,17 @@ body {
   .main-content button {
       transition: none;
   }
+
+  .features {
+      flex-direction: column; /* Disposición vertical en pantallas pequeñas */
+  }
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-direction: column; /* Cambiar a disposición vertical */
+    align-items: center; /* Centrar los elementos */
+    gap: 20px; /* Espaciado entre los cuadros */
+    margin-top: 20px;
 }
