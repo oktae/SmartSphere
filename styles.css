@@ -43,31 +43,8 @@ nav a:hover {
     color: #e8491d;
 }
 
-.hero-section {
-    background-image: url('../src/assets/images/6746e22dd4f4aaba023bda85_El-Internet-de-las-Cosas-y-su-aplicacion-en-el-hogar.png');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-}
-
-.hero-section h2 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
 .container {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     margin: 20px;
@@ -113,20 +90,12 @@ footer a:hover {
     color: #e8491d;
 }
 
-/* Media Queries para pantallas pequeñas */
+/* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-    }
-
-    .hero-section h2 {
-        font-size: 2rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
     }
 
     .container {
@@ -136,19 +105,5 @@ footer a:hover {
 
     .card {
         width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        height: 300px;
-    }
-
-    .hero-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero-section p {
-        font-size: 0.9rem;
     }
 }
