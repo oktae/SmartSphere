@@ -124,3 +124,10 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+
+/* Ejemplo de media query */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
