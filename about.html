@@ -26,6 +26,21 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
         nav ul {
@@ -135,13 +150,18 @@
 </head>
 <body>
     <header>
-        <h1>Sobre Nosotros</h1>
+        <div class="logo-container">
+            <img src="logo.png" alt="SmartSphere Logo">
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            ☰
+        </button>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="services.html">Servicios</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li><a href="payments.html">Planes</a></li>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#planes">Planes</a></li>
             </ul>
         </nav>
     </header>

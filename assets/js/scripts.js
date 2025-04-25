@@ -22,3 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+<script src="scripts.js"></script>
