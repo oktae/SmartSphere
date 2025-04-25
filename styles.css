@@ -15,32 +15,38 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-header, nav {
+/* Estilos generales para la barra de navegación */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px; /* Reduce el tamaño de la banda negra */
     background: #000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #fff;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    position: relative;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #e8491d;
+}
+
+.logo-container img {
+    max-height: 50px; /* Ajusta el tamaño del logo */
+    width: auto;
 }
 
 .container {
@@ -92,11 +98,15 @@ footer a:hover {
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia el menú a vertical */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+        gap: 10px;
+    }
+
     header {
         flex-direction: column; /* Cambia el header a una columna */
-        align-items: center;
-        text-align: center;
-        position: relative; /* Asegura que los elementos dentro del header puedan posicionarse */
+        align-items: flex-start; /* Alinea el contenido a la izquierda */
     }
 
     .logo-container {
@@ -110,16 +120,14 @@ footer a:hover {
     }
 
     nav ul {
-        flex-direction: column; /* Cambia el menú a vertical */
         background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para mejor visibilidad */
         padding: 10px;
         border-radius: 8px;
-        gap: 10px; /* Espaciado entre los elementos del menú */
     }
 
     nav ul li {
         margin: 5px 0; /* Espaciado entre los elementos del menú */
-    }s
+    }
 
     nav a {
         color: #fff; /* Asegura que el texto sea visible */
