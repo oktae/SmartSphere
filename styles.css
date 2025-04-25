@@ -87,6 +87,11 @@ body {
     transition: background-color 0.3s;
 }
 
+/* Animaciones generales */
+.main-content button {
+    transition: background-color 0.3s;
+}
+
 .main-content button:hover {
     background-color: #e64a19;
 }
@@ -129,5 +134,10 @@ body {
 @media (max-width: 768px) {
   .container {
     padding: 10px;
+  }
+
+  /* Desactivar animaciones en dispositivos móviles */
+  .main-content button {
+      transition: none;
   }
 }
