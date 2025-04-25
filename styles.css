@@ -96,16 +96,39 @@ footer a:hover {
         flex-direction: column; /* Cambia el header a una columna */
         align-items: center;
         text-align: center;
+        position: relative; /* Asegura que los elementos dentro del header puedan posicionarse */
     }
 
     .logo-container {
-        margin: 0 0 10px 0; /* Ajusta el margen para centrar el logo */
+        margin-bottom: 10px; /* Agrega espacio debajo del logo */
+    }
+
+    nav {
+        position: absolute; /* Posiciona el menú de navegación */
+        top: 10px; /* Ajusta la distancia desde la parte superior */
+        right: 10px; /* Ajusta la distancia desde la parte derecha */
     }
 
     nav ul {
         flex-direction: column; /* Cambia el menú a vertical */
-        align-items: center;
+        background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para mejor visibilidad */
+        padding: 10px;
+        border-radius: 8px;
         gap: 10px; /* Espaciado entre los elementos del menú */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Espaciado entre los elementos del menú */
+    }s
+
+    nav a {
+        color: #fff; /* Asegura que el texto sea visible */
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    nav a:hover {
+        color: #e8491d; /* Cambia el color al pasar el cursor */
     }
 
     .container {
@@ -132,7 +155,7 @@ footer a:hover {
         margin-bottom: 20px; /* Agrega espacio debajo del párrafo */
     }
 
-    .hero-section .cta-button {
+    .cta-button {
         font-size: 1rem; /* Ajusta el tamaño del botón */
         padding: 10px 20px; /* Ajusta el relleno del botón */
     }
