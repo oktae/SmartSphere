@@ -1,35 +1,154 @@
-/* Estilos generales para pantallas grandes */
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Estilos para pantallas pequeñas (teléfonos) */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
+header, nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
 
-    nav {
-        display: flex;
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e8491d;
+}
+
+.hero-section {
+    background-image: url('../src/assets/images/6746e22dd4f4aaba023bda85_El-Internet-de-las-Cosas-y-su-aplicacion-en-el-hogar.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e8491d;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
-    nav a {
-        display: block;
-        margin: 10px 0;
+    .hero-section h2 {
+        font-size: 2rem;
     }
 
-    .hero {
-        font-size: 1.2em;
-        text-align: center;
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
     }
 }
