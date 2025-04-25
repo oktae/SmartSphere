@@ -7,6 +7,8 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+    font-size: 16px; /* Tamaño base */
+    line-height: 1.5; /* Espaciado entre líneas */
 }
 
 @keyframes gradientAnimation {
@@ -66,6 +68,9 @@ header.shrink .logo-container img {
 }
 
 .container {
+    width: 90%; /* Usar un ancho relativo */
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor */
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -78,12 +83,17 @@ header.shrink .logo-container img {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    width: 200px;
+    width: 30%; /* Tres tarjetas por fila en pantallas grandes */
+    margin: 10px;
     transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: scale(1.05);
+}
+
+section {
+    margin: 20px 0; /* Espaciado entre secciones */
 }
 
 footer {
@@ -112,6 +122,28 @@ footer a:hover {
     color: #e8491d;
 }
 
+img {
+    max-width: 100%; /* Las imágenes se ajustan al contenedor */
+    height: auto; /* Mantener la proporción */
+}
+
+.menu-hamburguesa button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Ocultar en pantallas grandes */
+}
+
+#menu {
+    display: flex;
+    flex-direction: row; /* Menú horizontal por defecto */
+}
+
+#menu.oculto {
+    display: none; /* Ocultar menú en móviles */
+}
+
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
     nav ul {
@@ -130,7 +162,8 @@ footer a:hover {
     }
 
     .card {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        width: 100%; /* Una tarjeta por fila en móviles */
+        margin: 10px 0;
     }
 
     .hero-section {
@@ -178,5 +211,59 @@ footer a:hover {
 
     footer p {
         font-size: 0.8rem; /* Reduce el tamaño del texto en el footer */
+    }
+
+    body {
+        font-size: 14px; /* Reducir el tamaño de la fuente en móviles */
+    }
+
+    nav {
+        flex-direction: column; /* Menú en columna */
+        align-items: center;
+    }
+
+    header img {
+        max-width: 120px; /* Reducir el tamaño del logo */
+    }
+
+    button {
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+
+    .menu-hamburguesa button {
+        display: block; /* Mostrar botón hamburguesa en móviles */
+    }
+
+    #menu {
+        flex-direction: column; /* Menú vertical en móviles */
+        align-items: center;
+    }
+
+    section {
+        margin: 15px 0; /* Reducir el espaciado en móviles */
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .card {
+        width: 45%; /* Dos tarjetas por fila */
+    }
+
+    nav {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1024px) {
+    .card {
+        width: 30%; /* Tres tarjetas por fila */
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
     }
 }

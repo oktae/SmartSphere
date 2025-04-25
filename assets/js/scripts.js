@@ -31,6 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
             header.classList.remove('shrink'); // Elimina la clase 'shrink' si vuelve al tope
         }
     });
+
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    });
 });
+
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('oculto');
+}
 
 <script src="scripts.js"></script>

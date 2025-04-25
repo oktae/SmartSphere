@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - SmartSphere</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
@@ -33,6 +33,43 @@
             padding: 20px;
             background: #000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-hamburguesa {
+            position: relative;
+        }
+
+        .menu-hamburguesa button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        #menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            flex-direction: column;
+        }
+
+        #menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        #menu.oculto {
+            display: none;
+        }
+
+        #menu.visible {
+            display: flex;
         }
 
         .logo-container {
@@ -275,22 +312,27 @@
             margin-top: 10px;
         }
     </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('visible');
+            menu.classList.toggle('oculto');
+        }
+    </script>
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
     <div class="container">
         <header>
-            <div class="logo-container">
-                <img src="../src/assets/images/smartsphere-logo.png" alt="SmartSphere Logo">
+            <div class="menu-hamburguesa">
+                <button onclick="toggleMenu()">☰</button>
+                <nav id="menu" class="oculto">
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="#planes">Planes</a>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="about.html">Nosotros</a></li>
-                    <li><a href="services.html">Servicios</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="payments.html">Planes</a></li>
-                </ul>
-            </nav>
         </header>
         <main>
             <section class="hero-section">
@@ -341,6 +383,5 @@
             <p style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">&copy; 2025 SmartSphere. Todos los derechos reservados.</p>
         </footer>
     </div>
-    <script src="scripts.js"></script>
 </body>
 </html>
