@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IoT Company Website
 
 ## Project Description
@@ -48,3 +49,6 @@ iot-company-website
 
 ## License
 This project is licensed under the MIT License.
+=======
+# SmartSphere
+>>>>>>> 77f444b6a084e013e9fc53b26ee1ff8a7becad56
