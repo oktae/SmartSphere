@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartSphere</title>
+    <title>Inicio - SmartSphere</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABaUlEQVR4nO2WPU7DQBCFP4nIJfSUgRtAqEIA5SRwGOLwEy4AgksgJEoQHan4OQEOFS7pwGikibCcjT22F4rITxrJGr9987y7nl1o8IsAGAITIAJCzf2bbggkmZBcXZh1Jw7iuwcDZt3IQXzzYMCsGzqIAw8GzLqBkqM/2IReddeBM+ARiDXkeQSseTDMdJqyaAGnwJdjSqch746Va9U1EUXwNqdwNm4cJmoZGJYoPu9fL20gyZnmS2AbWNaQ56uC5TEbuM8Z/AH0csbuKGfe+DsqYJwS6GhuFbjQjiad7lxzgq0UX8bWRpwS7AIbwBOwD6xoHGhuE+in+LFvA4mGFMqi4+B5MTB2CHfVxHPqy/ccvEpL8FDiV9vV4t9GvmzwQiQloq+bzmqgciMKKzSiQ4OuEy5iS9urtfi171aMCh4ZDiOZrSVmYTZQhLaeiq/Ap8YLcKLvKiNobsXMrmlzKx5QH4t3K14s/AAi2ktEynyiEwAAAABJRU5ErkJggg==" type="image/png">
     <style>
         body {
@@ -275,49 +274,72 @@
             font-size: 1.2rem;
             margin-top: 10px;
         }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin: 20px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            width: 200px;
-        }
     </style>
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="services.html">Servicios</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li><a href="plans.html">Planes</a></li>
-        </ul>
-    </nav>
     <div class="container">
-        <div class="card">Contenido 1</div>
-        <div class="card">Contenido 2</div>
-        <div class="card">Contenido 3</div>
+        <header>
+            <div class="logo-container">
+                <img src="../src/assets/images/smartsphere-logo.png" alt="SmartSphere Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="payments.html">Planes</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="hero-section">
+                <div class="text-content">
+                    <h2>SmartSphere</h2>
+                    <p>Ofrecemos soluciones de IoT de vanguardia que mejoran la conectividad y mejoran vidas.</p>
+                    <a href="services.html" class="cta-button">Descubre nuestros servicios</a>
+                </div>
+            </section>
+            <section class="animated-image-section">
+                <div class="image-container">
+                    <img src="../src/assets/images/casa io.jpg" alt="Casa IoT">
+                    <div class="text-overlay">
+                        <h2>Conecta tu hogar con IoT</h2>
+                        <p>Transforma tu espacio en un hogar inteligente con nuestras soluciones innovadoras.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="why-us">
+                <h2>¿Por qué elegirnos?</h2>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Innovación</h3>
+                        <p>Nuestro equipo utiliza las últimas tecnologías para ofrecer soluciones únicas.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Soporte</h3>
+                        <p>Estamos disponibles 24/7 para ayudarte con cualquier problema.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Seguridad</h3>
+                        <p>Garantizamos la protección de tus datos y dispositivos.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Conéctate con nosotros:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=61575731127398" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/smartsphere_home/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://www.tiktok.com/@yourcompany" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+            </ul>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">&copy; 2025 SmartSphere. Todos los derechos reservados.</p>
+        </footer>
     </div>
-    <footer>
-        <p>Conéctate con nosotros:</p>
-        <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=61575731127398" target="_blank"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/smartsphere_home/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-            <li><a href="https://www.tiktok.com/@yourcompany" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-        </ul>
-        <p style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">&copy; 2025 SmartSphere. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>

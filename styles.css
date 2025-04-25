@@ -92,10 +92,20 @@ footer a:hover {
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+    header {
+        flex-direction: column; /* Cambia el header a una columna */
         align-items: center;
-        gap: 10px;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin: 0 0 10px 0; /* Ajusta el margen para centrar el logo */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia el menú a vertical */
+        align-items: center;
+        gap: 10px; /* Espaciado entre los elementos del menú */
     }
 
     .container {
@@ -105,5 +115,45 @@ footer a:hover {
 
     .card {
         width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .hero-section {
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 20px; /* Agrega espacio interno */
+        text-align: center; /* Centra el texto */
+    }
+
+    .hero-section h2 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    .hero-section p {
+        font-size: 1rem; /* Reduce el tamaño del párrafo */
+    }
+
+    .features {
+        flex-direction: column; /* Cambia las características a una columna */
+        gap: 20px; /* Espaciado entre las características */
+    }
+
+    .feature {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    .animated-image-section {
+        margin: 20px 0; /* Reduce el margen superior e inferior */
+    }
+
+    .image-container img {
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    footer ul {
+        flex-direction: column; /* Cambia los íconos de redes sociales a vertical */
+        gap: 10px; /* Espaciado entre los íconos */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Reduce el tamaño del texto en el footer */
     }
 }
