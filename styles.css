@@ -1,9 +1,10 @@
-/* Ajuste general del cuerpo */
+/* General */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #1e3a47; /* Fondo consistente */
+    background-color: #1e3a47;
     color: white;
+    text-align: center;
 }
 
 /* Barra de navegación */
@@ -62,11 +63,32 @@ body {
 
 /* Contenido principal */
 .main-content {
-    width: 60%;
     padding: 20px;
-    background-color: #2a4d5e;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.main-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.main-content button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.main-content button:hover {
+    background-color: #e64a19;
 }
 
 /* Barra lateral derecha */
@@ -79,25 +101,26 @@ body {
     text-align: center;
 }
 
-/* Botón */
-button {
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #e64a19;
-}
-
-/* Ajuste de imágenes */
-img {
+/* Imagen */
+#imagen img {
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }

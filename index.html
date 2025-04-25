@@ -312,105 +312,30 @@
             margin-top: 10px;
         }
     </style>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('visible');
-            menu.classList.toggle('oculto');
-        }
-    </script>
 </head>
 <body>
-    <canvas id="backgroundCanvas"></canvas>
-    <div class="container">
-        <div class="sidebar-left">
-            <h2>Bienvenido a nuestra página de inicio</h2>
-        </div>
-        <div class="main-content">
-            <img src="imagen-principal.jpg" alt="Imagen principal">
+    <header class="navbar">
+        <div class="logo">Mi Empresa IoT</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </header>
+    <main class="main-content">
+        <section id="inicio">
             <h1>SmartSphere</h1>
             <p>Ofrecemos soluciones de IoT de vanguardia que mejoran la conectividad y nuestras vidas.</p>
             <button>Descubre nuestros servicios</button>
-        </div>
-        <div class="sidebar-right">
-            <h3>Conéctate con nosotros:</h3>
-            <p>
-                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">TikTok</a>
-            </p>
-        </div>
-    </div>
-    <div class="container">
-        <nav class="navbar">
-            <div class="logo">Mi Empresa IoT</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <section id="inicio">
-            <h1>Bienvenido a nuestra página de inicio</h1>
         </section>
-        <header>
-            <div class="menu-hamburguesa">
-                <button onclick="toggleMenu()">☰</button>
-                <nav id="menu" class="oculto">
-                    <a href="#nosotros">Nosotros</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#contacto">Contacto</a>
-                    <a href="#planes">Planes</a>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <section class="hero-section">
-                <div class="text-content">
-                    <h2>SmartSphere</h2>
-                    <p>Ofrecemos soluciones de IoT de vanguardia que mejoran la conectividad y mejoran vidas.</p>
-                    <a href="services.html" class="cta-button">Descubre nuestros servicios</a>
-                </div>
-            </section>
-            <section class="animated-image-section">
-                <div class="image-container">
-                    <img src="../src/assets/images/casa io.jpg" alt="Casa IoT">
-                    <div class="text-overlay">
-                        <h2>Conecta tu hogar con IoT</h2>
-                        <p>Transforma tu espacio en un hogar inteligente con nuestras soluciones innovadoras.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="why-us">
-                <h2>¿Por qué elegirnos?</h2>
-                <div class="features">
-                    <div class="feature">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Innovación</h3>
-                        <p>Nuestro equipo utiliza las últimas tecnologías para ofrecer soluciones únicas.</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-users"></i>
-                        <h3>Soporte</h3>
-                        <p>Estamos disponibles 24/7 para ayudarte con cualquier problema.</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Seguridad</h3>
-                        <p>Garantizamos la protección de tus datos y dispositivos.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>Conéctate con nosotros:</p>
-            <ul>
-                <li><a href="https://www.facebook.com/profile.php?id=61575731127398" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/smartsphere_home/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                <li><a href="https://www.tiktok.com/@yourcompany" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-            </ul>
-            <p style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">&copy; 2025 SmartSphere. Todos los derechos reservados.</p>
-        </footer>
-    </div>
+        <section id="imagen">
+            <img src="imagen-principal.jpg" alt="Imagen principal">
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2025 SmartSphere. Todos los derechos reservados.</p>
+        <p>Conéctate con nosotros: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">TikTok</a></p>
+    </footer>
 </body>
 </html>
