@@ -1,48 +1,12 @@
-/* Estilos generales */
-body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    font-size: 16px; /* Tamaño base */
-    line-height: 1.5; /* Espaciado entre líneas */
-}
-
+/* Ajuste general del cuerpo */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #1e3a47; /* Fondo consistente */
+    color: white;
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Estilos generales para la barra de navegación */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px; /* Tamaño inicial del header */
-    background: rgba(0, 0, 0, 1); /* Fondo sólido inicialmente */
-    color: #fff;
-    position: fixed; /* Fija el header en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.3s ease; /* Transición suave para cambios */
-}
-
-header.shrink {
-    padding: 5px 20px; /* Reduce el tamaño del header al desplazarse */
-    background: rgba(0, 0, 0, 0.8); /* Fondo translúcido al desplazarse */
-}
-
+/* Barra de navegación */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -79,232 +43,61 @@ header.shrink {
     color: #00bcd4;
 }
 
-nav ul {
-    list-style: none;
-    display: flex; /* Mantén el menú horizontal */
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #e8491d;
-}
-
-.logo-container img {
-    max-height: 50px; /* Tamaño inicial del logo */
-    width: auto;
-    transition: max-height 0.3s ease; /* Transición suave para el logo */
-}
-
-header.shrink .logo-container img {
-    max-height: 30px; /* Reduce el tamaño del logo al desplazarse */
-}
-
+/* Contenedor principal */
 .container {
-    width: 90%; /* Usar un ancho relativo */
-    max-width: 1200px; /* Limitar el ancho máximo */
-    margin: 0 auto; /* Centrar el contenedor */
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.1);
+/* Barra lateral izquierda */
+.sidebar-left {
+    width: 20%;
+    background-color: #2a4d5e;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 30%; /* Tres tarjetas por fila en pantallas grandes */
-    margin: 10px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-section {
-    margin: 20px 0; /* Espaciado entre secciones */
-}
-
-footer {
-    background: #000;
-    text-align: center;
+/* Contenido principal */
+.main-content {
+    width: 60%;
     padding: 20px;
-    margin-top: 50px;
+    background-color: #2a4d5e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+/* Barra lateral derecha */
+.sidebar-right {
+    width: 20%;
+    background-color: #2a4d5e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #e8491d;
-}
-
-img {
-    max-width: 100%; /* Las imágenes se ajustan al contenedor */
-    height: auto; /* Mantener la proporción */
-}
-
-.menu-hamburguesa button {
-    font-size: 24px;
-    background: none;
+/* Botón */
+button {
+    background-color: #ff5722;
+    color: white;
     border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    display: none; /* Ocultar en pantallas grandes */
+    font-size: 1em;
+    transition: background-color 0.3s;
 }
 
-#menu {
-    display: flex;
-    flex-direction: row; /* Menú horizontal por defecto */
+button:hover {
+    background-color: #e64a19;
 }
 
-#menu.oculto {
-    display: none; /* Ocultar menú en móviles */
-}
-
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: row; /* Mantén el menú horizontal en teléfonos */
-        justify-content: center; /* Centra las opciones del menú */
-    }
-
-    header {
-        flex-direction: row; /* Mantén el header en una fila */
-        align-items: center;
-    }
-
-    .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .card {
-        width: 100%; /* Una tarjeta por fila en móviles */
-        margin: 10px 0;
-    }
-
-    .hero-section {
-        text-align: center; /* Centra el contenido */
-        padding: 20px; /* Agrega espacio interno */
-    }
-
-    .hero-section h2 {
-        font-size: 2rem; /* Reduce el tamaño del título */
-        margin-bottom: 10px; /* Agrega espacio debajo del título */
-    }
-
-    .hero-section p {
-        font-size: 1rem; /* Reduce el tamaño del párrafo */
-        margin-bottom: 20px; /* Agrega espacio debajo del párrafo */
-    }
-
-    .cta-button {
-        font-size: 1rem; /* Ajusta el tamaño del botón */
-        padding: 10px 20px; /* Ajusta el relleno del botón */
-    }
-
-    .features {
-        flex-direction: column; /* Cambia las características a una columna */
-        gap: 20px; /* Espaciado entre las características */
-    }
-
-    .feature {
-        width: 100%; /* Ocupa todo el ancho disponible */
-        text-align: center; /* Centra el texto */
-    }
-
-    .animated-image-section {
-        margin: 20px 0; /* Reduce el margen superior e inferior */
-    }
-
-    .image-container img {
-        height: auto; /* Ajusta la altura automáticamente */
-    }
-
-    footer ul {
-        flex-direction: column; /* Cambia los íconos de redes sociales a vertical */
-        gap: 10px; /* Espaciado entre los íconos */
-    }
-
-    footer p {
-        font-size: 0.8rem; /* Reduce el tamaño del texto en el footer */
-    }
-
-    body {
-        font-size: 14px; /* Reducir el tamaño de la fuente en móviles */
-    }
-
-    nav {
-        flex-direction: column; /* Menú en columna */
-        align-items: center;
-    }
-
-    header img {
-        max-width: 120px; /* Reducir el tamaño del logo */
-    }
-
-    button {
-        width: 100%; /* Botón ocupa todo el ancho */
-    }
-
-    .menu-hamburguesa button {
-        display: block; /* Mostrar botón hamburguesa en móviles */
-    }
-
-    #menu {
-        flex-direction: column; /* Menú vertical en móviles */
-        align-items: center;
-    }
-
-    section {
-        margin: 15px 0; /* Reducir el espaciado en móviles */
-    }
-}
-
-/* Estilos para pantallas medianas (tablets) */
-@media (max-width: 1024px) and (min-width: 768px) {
-    .card {
-        width: 45%; /* Dos tarjetas por fila */
-    }
-
-    nav {
-        flex-direction: row;
-        gap: 20px;
-    }
-}
-
-/* Estilos para pantallas grandes (escritorio) */
-@media (min-width: 1024px) {
-    .card {
-        width: 30%; /* Tres tarjetas por fila */
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-    }
+/* Ajuste de imágenes */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
