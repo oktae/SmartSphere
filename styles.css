@@ -200,6 +200,70 @@ body::before {
   .features {
       flex-direction: column; /* Disposición vertical en pantallas pequeñas */
   }
+
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .menu-hamburguesa {
+      display: block;
+  }
+
+  .menu-hamburguesa button {
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      padding: 10px 0;
+  }
+
+  .nav-links.visible {
+      display: flex;
+  }
+
+  .nav-links li {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  .hero-section {
+      height: auto;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .hero-section h1 {
+      font-size: 2rem;
+  }
+
+  .hero-section p {
+      font-size: 1rem;
+  }
+
+  .image-container {
+      max-width: 100%;
+  }
+
+  footer {
+      font-size: 0.9rem;
+  }
+
+  .social-media a {
+      font-size: 1.2rem;
+  }
 }
 
 /* Features */
