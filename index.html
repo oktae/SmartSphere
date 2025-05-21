@@ -29,6 +29,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: transform 0.3s ease-in-out;
         }
 
         .logo-container img {
@@ -109,6 +110,11 @@
             margin: 0 auto; /* Centra la imagen horizontalmente */
         }
 
+        /* Hide header on scroll */
+        header.hidden {
+            transform: translateY(-100%);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             header {
@@ -176,5 +182,19 @@
             <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
     </footer>
+    <script>
+        // Hide and show header on scroll
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+                header.classList.add('hidden'); // Hide header
+            } else {
+                header.classList.remove('hidden'); // Show header
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
 </body>
 </html>
