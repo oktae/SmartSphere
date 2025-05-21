@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABaUlEQVR4nO2WPU7DQBCFP4nIJfSUgRtAqEIA5SRwGOLwEy4AgksgJEoQHan4OQEOFS7pwGikibCcjT22F4rITxrJGr9987y7nl1o8IsAGAITIAJCzf2bbggkmZBcXZh1Jw7iuwcDZt3IQXzzYMCsGzqIAw8GzLqBkqM/2IReddeBM+ARiDXkeQSseTDMdJqyaAGnwJdjSqch746Va9U1EUXwNqdwNm4cJmoZGJYoPu9fL20gyZnmS2AbWNaQ56uC5TEbuM8Z/AH0csbuKGfe+DsqYJwS6GhuFbjQjiad7lxzgq0UX8bWRpwS7AIbwBOwD6xoHGhuE+in+LFvA4mGFMqi4+B5MTB2CHfVxHPqy/ccvEpL8FDiV9vV4t9GvmzwQiQloq+bzmqgciMKKzSiQ4OuEy5iS9urtfi171aMCh4ZDiOZrSVmYTZQhLaeiq/Ap8YLcKLvKiNobsXMrmlzKx5QH4t3K14s/AAi2ktEynyiEwAAAABJRU5ErkJggg==" type="image/png">
     <style>
         body {
@@ -312,31 +313,109 @@
             font-size: 1.2rem;
             margin-top: 10px;
         }
+
+        .image-section {
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            height: 100vh; /* Ajusta la altura de la sección */
+            text-align: center;
+        }
+
+        .image-container {
+            max-width: 80%; /* Limita el ancho máximo de la imagen */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-container img {
+            width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+
+        /* Estilos para pantallas grandes (computadoras) */
+        @media (min-width: 1024px) {
+            .main-content {
+                max-width: 1200px; /* Limitar el ancho máximo del contenido */
+                margin: 0 auto; /* Centrar el contenido */
+                padding: 20px;
+            }
+
+            .hero-section {
+                height: 600px; /* Aumentar la altura de la sección hero */
+            }
+
+            .hero-section h2 {
+                font-size: 4rem; /* Aumentar el tamaño del título */
+            }
+
+            .hero-section p {
+                font-size: 1.5rem; /* Aumentar el tamaño del texto */
+            }
+
+            .image-container {
+                max-width: 60%; /* Reducir el ancho máximo de las imágenes */
+            }
+
+            .features {
+                flex-wrap: nowrap; /* Evitar que los elementos se envuelvan */
+                justify-content: space-between; /* Espaciar los elementos uniformemente */
+            }
+
+            .feature {
+                width: 30%; /* Ajustar el ancho de las características */
+            }
+
+            footer {
+                font-size: 1rem; /* Aumentar el tamaño del texto en el pie de página */
+            }
+        }
     </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Mi Empresa IoT</div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="src/assets/images/smartsphere-logo.png" alt="SmartSphere Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="payments.html">Planes</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="main-content">
         <section id="inicio">
             <h1>SmartSphere</h1>
             <p>Ofrecemos soluciones de IoT de vanguardia que mejoran la conectividad y nuestras vidas.</p>
-            <button>Descubre nuestros servicios</button>
+            <button onclick="document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' });">
+                Descubre nuestros servicios
+            </button>
         </section>
-        <section id="imagen">
-            <img src="imagen-principal.jpg" alt="Imagen principal">
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <p>Aquí puedes describir los servicios que ofrece tu empresa.</p>
+        </section>
+        <section id="imagen" class="image-section">
+            <div class="image-container">
+                <img src="src/assets/images/6746e22dd4f4aaba023bda85_El-Internet-de-las-Cosas-y-su-aplicacion-en-el-hogar.png" 
+                     alt="El Internet de las Cosas y su aplicación en el hogar">
+            </div>
         </section>
     </main>
     <footer class="footer">
         <p>© 2025 SmartSphere. Todos los derechos reservados.</p>
-        <p>Conéctate con nosotros: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">TikTok</a></p>
+        <p>Conéctate con nosotros:</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
     </footer>
 </body>
 </html>

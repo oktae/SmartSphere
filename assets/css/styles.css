@@ -61,17 +61,30 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin: 0;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #e8491d;
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #e8491d;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 main {
