@@ -102,12 +102,24 @@
         }
 
         /* Image Section */
+        .image-section {
+            position: relative;
+        }
+
         .image-section .image-container img {
             width: 100%; /* Ajusta el ancho al 100% del contenedor */
             max-width: none; /* Elimina el límite de tamaño máximo */
             height: auto; /* Mantiene la proporción de la imagen */
             display: block;
             margin: 0 auto; /* Centra la imagen horizontalmente */
+        }
+
+        .image-section .cta-button {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
         }
 
         /* Hide header on scroll */
@@ -157,7 +169,6 @@
         <section class="hero-section">
             <h1>SmartSphere</h1>
             <p>Ofrecemos soluciones de IoT de vanguardia que mejoran la conectividad y nuestras vidas.</p>
-            <a href="#servicios" class="cta-button">Descubre nuestros servicios</a>
         </section>
         <section id="servicios">
             <div class="servicios-container">
@@ -168,6 +179,7 @@
         </section>
         <section id="imagen" class="image-section">
             <div class="image-container">
+                <a href="#servicios" class="cta-button">Descubre nuestros servicios</a>
                 <img src="src/assets/images/6746e22dd4f4aaba023bda85_El-Internet-de-las-Cosas-y-su-aplicacion-en-el-hogar.png" 
                      alt="Aplicación del Internet de las Cosas en el hogar">
             </div>

@@ -24,6 +24,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: transform 0.3s ease-in-out;
         }
 
         nav ul {
@@ -149,6 +150,32 @@
                 transform: translateY(0);
             }
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Hide header on scroll */
+        header.hidden {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -187,5 +214,19 @@
     </footer>
     <script src="../assets/js/animations.js"></script>
     <script src="scripts.js"></script>
+    <script>
+        // Hide and show header on scroll
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+                header.classList.add('hidden'); // Hide header
+            } else {
+                header.classList.remove('hidden'); // Show header
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
 </body>
 </html>
