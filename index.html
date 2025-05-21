@@ -257,15 +257,34 @@
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeInContainer 1.5s ease-in-out; /* Add fade-in animation */
         }
 
         .image-container img {
-            width: 100%;
-            height: auto;
-            transition: transform 1.5s ease, opacity 1.5s ease;
-            opacity: 0;
-            transform: scale(1.2);
-            animation: fadeInMove 2s forwards;
+            width: 100%; /* Ensure the image fills the container */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 90vh; /* Increase the height limit to 90% of the viewport */
+            max-width: 90%; /* Ensure the image doesn't exceed 90% of the container width */
+            object-fit: cover; /* Ensure the image covers the container */
+            transition: transform 0.5s ease, filter 0.5s ease; /* Smooth hover effect */
+        }
+
+        @keyframes fadeInContainer {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .image-container img {
+                max-height: 80vh; /* Adjust the height limit for larger screens */
+                max-width: 80%; /* Adjust the width limit for larger screens */
+            }
         }
 
         @keyframes fadeInMove {
