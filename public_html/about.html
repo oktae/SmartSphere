@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Conoce más sobre SmartSphere, nuestra misión y visión.">
+    <meta name="author" content="Devcrud">
+    <title>Sobre Nosotros - SmartSphere</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + LeadMark main styles -->
+    <link rel="stylesheet" href="assets/css/leadmark.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* General improvements */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #D1D5DB;
+            background-color: #11292F;
+        }
+
+        h6.section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00bcd4;
+            margin-bottom: 20px;
+        }
+
+        h6.section-subtitle {
+            font-size: 1.2rem;
+            color: #D1D5DB;
+            margin-bottom: 40px;
+        }
+
+        .about-section h5 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00bcd4;
+            margin-bottom: 15px;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #D1D5DB;
+        }
+
+        .image-section {
+            text-align: center; /* Center images horizontally */
+        }
+
+        .image-section img {
+            display: inline-block; /* Ensure images are treated as inline elements */
+            margin: 0 auto; /* Center images within their container */
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-values ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-values ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .about-values ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #00bcd4;
+        }
+
+        footer {
+            background-color: #1A3A40;
+            color: #D1D5DB;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Existing styles */
+        body {
+            color: #ffffff;
+            background-color: #11292F !important; /* Dark blue background */
+        }
+        h1, h2, h3, h4, h5, h6, p, a, span, div, .navbar, .btn {
+            color: #ffffff !important;
+        }
+        .navbar {
+            background-color: #11292F !important;
+        }
+        .navbar .nav-link {
+            position: relative;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .navbar .nav-link:hover {
+            color: #F2451C !important; /* Orange text on hover */
+            border-bottom: 2px solid #F2451C; /* Orange underline on hover */
+        }
+        .navbar-toggler {
+            border-color: #F2451C; /* Orange border for toggler */
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28242,69,28,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .navbar-collapse {
+            background-color: #11292F; /* Match dropdown background to navbar */
+        }
+        .navbar-collapse .nav-link {
+            color: #D1D5DB !important; /* Ensure dropdown links are readable */
+        }
+        .navbar-collapse .nav-link:hover {
+            color: #F2451C !important; /* Orange text on hover */
+            border-bottom: 2px solid #F2451C; /* Orange underline on hover */
+        }
+        .section {
+            background-color: #11292F !important;
+            margin-top: 80px; /* Further increase margin to ensure visibility below the menu */
+        }
+        .about-section {
+            padding: 60px 0;
+        }
+        .about-section h6 {
+            color: #00bcd4; /* Cyan for section titles */
+        }
+        .about-section h5 {
+            font-size: 1.8rem; /* Increase font size for better readability */
+            font-weight: 700; /* Make the text bold */
+            letter-spacing: 0.5px; /* Add slight spacing between letters */
+            margin-bottom: 15px; /* Add spacing below the heading */
+            color: #00bcd4; /* Cyan color for a professional look */
+        }
+        .about-section p {
+            font-size: 1.1rem; /* Slightly larger font size for better readability */
+            line-height: 1.8; /* Increase line height for better spacing */
+            color: #D1D5DB; /* Light gray for a softer look */
+            text-align: justify; /* Justify text for a clean appearance */
+        }
+        .about-values ul {
+            list-style: none;
+            padding: 0;
+        }
+        .about-values ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        .about-values ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #00bcd4; /* Cyan checkmark */
+        }
+        .image-section {
+            text-align: center; /* Center images horizontally */
+        }
+        .image-section img {
+            display: inline-block; /* Ensure images are treated as inline elements */
+            margin: 0 auto; /* Center images within their container */
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+        .highlight {
+            color: #F2451C; /* Orange for emphasis */
+        }
+        .btn-primary {
+            background-color: #00bcd4; /* Cyan button */
+            border-color: #00bcd4;
+        }
+        .btn-primary:hover {
+            background-color: #F2451C; /* Orange hover effect */
+            border-color: #F2451C;
+        }
+        /* Remove existing animations */
+        .fade-in {
+            animation: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/imgs/smartsphere-logo.png" alt="SmartSphere Logo" style="width: 250px; height: auto; filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Nuestro Servicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planes.html">Planes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Line Divider -->
+    <div style="height: 4px; background-color: #F2451C; width: 100%; position: fixed; top: 56px; z-index: 999;"></div>
+    <!-- End of Navigation -->
+
+    <!-- About Section -->
+    <section class="section about-section">
+        <div class="container">
+            <h6 class="section-title text-center animate-fade-in">Sobre Nosotros</h6>
+            <h6 class="section-subtitle mb-5 text-center animate-fade-in">Conoce más sobre nuestra <span class="highlight">misión</span>, <span class="highlight">visión</span> y <span class="highlight">valores</span></h6>
+            
+            <!-- Misión Section -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 animate-fade-in">
+                    <h5>Misión</h5>
+                    <p>En SmartSphere, nuestra misión es conectar hogares y personas a través de soluciones tecnológicas innovadoras, mejorando la calidad de vida y la eficiencia en el día a día.</p>
+                </div>
+                <div class="col-md-6 image-section">
+                    <img src="assets/imgs/equipo.jpg" alt="Equipo trabajando" class="rounded-lg transition duration-500 hover:scale-110">
+                </div>
+            </div>
+
+            <!-- Visión Section -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 image-section">
+                    <img src="assets/imgs/equipo 2.jpg" alt="Equipo colaborando" class="img-fluid">
+                </div>
+                <div class="col-md-6 fade-in">
+                    <h5>Visión</h5>
+                    <p>Ser líderes en el mercado de soluciones inteligentes para el hogar, ofreciendo productos y servicios que transformen la manera en que las personas interactúan con su entorno.</p>
+                </div>
+            </div>
+
+            <!-- Additional Image Section 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-12 text-center fade-in">
+                    <img src="assets/imgs/c1.gif" alt="Innovación en acción" class="img-fluid" style="max-width: 80%; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);">
+                    <p class="mt-3">Innovación constante para un futuro más conectado.</p>
+                </div>
+            </div>
+
+            <!-- Additional Image Section 2 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-12 text-center fade-in">
+                    <img src="assets/imgs/c2.gif" alt="Colaboración en equipo" class="img-fluid" style="max-width: 80%; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);">
+                    <p class="mt-3">Colaboración y trabajo en equipo para alcanzar nuestras metas.</p>
+                </div>
+            </div>
+
+            <!-- Valores Section -->
+            <div class="row mt-5 about-values fade-in">
+                <div class="col-md-12">
+                    <h5 class="text-center">Nuestros Valores</h5>
+                    <ul>
+                        <li>Innovación: Siempre buscamos nuevas formas de mejorar.</li>
+                        <li>Compromiso: Estamos dedicados a ofrecer lo mejor a nuestros clientes.</li>
+                        <li>Transparencia: Operamos con claridad y honestidad.</li>
+                        <li>Sostenibilidad: Nos preocupamos por el impacto ambiental de nuestras soluciones.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About Section -->
+
+    <!-- Footer -->
+    <footer class="mt-5 py-4 border-top border-secondary">
+        <p class="mb-0 small text-center">&copy; <script>document.write(new Date().getFullYear())</script>, SmartSphere. Todos los derechos reservados.</p>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- Core Scripts -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    <script src="assets/js/leadmark.js"></script>
+</body>
+</html>
