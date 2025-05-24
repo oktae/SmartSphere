@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with LeadMark landing page.">
+    <meta name="author" content="Devcrud">
+    <title>SmartSphere</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + LeadMark main styles -->
+	<link rel="stylesheet" href="assets/css/leadmark.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            color: #ffffff; /* Ensure text is white for contrast */
+            background-color: #11292F !important;
+        }
+        h1, h2, h3, h4, h5, h6, p, a, span, div, .navbar, .btn {
+            color: #ffffff !important; /* Ensure all text elements are white */
+        }
+        .card-body h6, .card-body p {
+            color: #ffffff !important; /* Ensure card text is white */
+        }
+        .navbar {
+            background-color: #11292F !important;
+        }
+        .navbar .nav-link {
+            position: relative;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .navbar .nav-link:hover {
+            color: #F2451C !important; /* Orange text on hover */
+            border-bottom: 2px solid #F2451C; /* Orange underline on hover */
+        }
+        .navbar-toggler {
+            border-color: #F2451C; /* Orange border for toggler */
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28242,69,28,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .navbar-collapse {
+            background-color: #11292F; /* Match dropdown background to navbar */
+        }
+        .navbar-collapse .nav-link {
+            color: #D1D5DB !important; /* Ensure dropdown links are readable */
+        }
+        .navbar-collapse .nav-link:hover {
+            color: #F2451C !important; /* Orange text on hover */
+            border-bottom: 2px solid #F2451C; /* Orange underline on hover */
+        }
+        .section {
+            background-color: #11292F !important; /* Set blank sections to #11292F */
+        }
+        .plans-section {
+            background-color: #11292F;
+            color: #ffffff;
+            padding: 60px 0;
+        }
+        .plans-section h6 {
+            color: #00bcd4;
+        }
+        .plan-card {
+            background-color: #32444B;
+            border: none;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .plan-card:hover {
+            transform: scale(1.05);
+        }
+        .plan-card .btn {
+            background-color: #00bcd4;
+            color: #ffffff;
+        }
+        .card {
+            background-color: #32444B; /* Ensure card background contrasts with text */
+            border: none;
+        }
+        @media (max-width: 768px) {
+            .header img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .portfolio-item img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .portfolio-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .portfolio-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .portfolio-item img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/imgs/smartsphere-logo.png" alt="SmartSphere Logo" style="width: 250px; height: auto; filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Nuestro Servicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planes.html">Planes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Line Divider -->
+    <div style="height: 4px; background-color: #F2451C; width: 100%;"></div>
+    <!-- End Of Second Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <h1 class="subtitle animate-fade-in">SmartSphere</h1>
+            <h1 class="title animate-fade-in">Conectando con tu hogar</h1>  
+        </div>  
+        <div class="shape">
+            <svg viewBox="0 0 1500 200">
+                <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
+            </svg>
+        </div>  
+        <div class="mouse-icon"><div class="wheel"></div></div>
+        <img src="assets/imgs/6746e22dd4f4aaba023bda85_El-Internet-de-las-Cosas-y-su-aplicacion-en-el-hogar.png" alt="El Internet de las Cosas y su aplicación en el hogar" class="transition duration-500 hover:scale-105">
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="assets/imgs/iot4.gif" alt="Animated Image" class="transition duration-500 hover:scale-110">
+        </div>
+    </header>
+    <!-- End Of Page Header -->
+
+    <!-- Service Section -->
+    
+    <!-- End OF Service Section -->
+
+    <!-- About Section -->
+    <!-- Removed and moved to about.html -->
+    <!-- End OF About Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <h6 class="section-title text-center">Soluciones</h6>
+            <h6 class="section-subtitle mb-5 text-center">Explora nuestras soluciones innovadoras para un mundo más conectado.</h6>
+            <div class="filters">
+                <a href="#" data-filter=".new" class="active">
+                   Home
+                </a>
+                <a href="#" data-filter=".advertising">
+                    Autoamatización
+                </a>
+                <a href="#" data-filter=".branding">
+                    Seguridad
+                </a>
+                <a href="#" data-filter=".web">
+                    Metricas
+                </a>
+            </div>
+            <div class="portfolio-container"> 
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/Imagen1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/metri.jpeg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Hogar</h6>
+                                <p class="subtitle">Conexion entre hogar y tu</p>
+                            </div>
+                        </div>   
+                    </div>             
+                </div>
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/Imagen2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/Imagen2.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Unico</h6>
+                                <p class="subtitle">Soluciones unicas y tecnologicas</p>
+                            </div>
+                        </div> 
+                    </div>                         
+                </div>
+                <div class="col-md-6 col-lg-4 advertising new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/iot6.gif" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                         
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/advertising-2.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Tecnologico</h6>
+                                <p class="subtitle">Todo en la palma de tu mano!</p>
+                            </div>
+                        </div>    
+                    </div>              
+                </div> 
+                <div class="col-md-6 col-lg-4 web">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/iot7.gif" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/web-4.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Comodidad</h6>
+                                <p class="subtitle">Vanguardia y comodidad!</p>
+                            </div>
+                        </div>
+                    </div>                                                     
+                </div>
+
+                <div class="col-md-6 col-lg-4 advertising"> 
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/iot7.gif" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                               
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/advertising-1.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Sencillo</h6>
+                                <p class="subtitle">Control total a un solo toque!</p>
+                            </div>
+                        </div>
+                    </div>                                                       
+                </div> 
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/metri.jpeg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
+                       <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/web-3.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Adaptacion</h6>
+                                <p class="subtitle">Adaptacion segun las necesidades!</p>
+                            </div>
+                        </div>
+                    </div>                                                     
+                </div>
+                <div class="col-md-6 col-lg-4 advertising new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/sec2.gif" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">       
+                       <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/advertising-3.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Seguro</h6>
+                                <p class="subtitle">Datos sifrados y seguros!</p>
+                            </div>
+                        </div>
+                    </div>                                                       
+                </div> 
+                <div class="col-md-6 col-lg-4 advertising new"> 
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/iot11.gif" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/advertising-4.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Eficiencia</h6>
+                                <p class="subtitle">Totalmente optimizado para tus necesidades!</p>
+                            </div>
+                        </div>
+                    </div>
+                            
+                </div> 
+                <div class="col-md-6 col-lg-4 branding new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/iot12.gif" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                        
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-1.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Menejo</h6>
+                                <p class="subtitle">Todo a travez de una pantalla!</p>
+                            </div>
+                        </div> 
+                    </div>
+                </div> 
+                <div class="col-md-6 col-lg-4 branding">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/equipo 2.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-2.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Transparencia</h6>
+                                <p class="subtitle">Trabajamos de manera clara y transparente!</p>
+                            </div>
+                        </div>
+                    </div>                                                     
+                </div> 
+                <div class="col-md-6 col-lg-4 branding new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/anali1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">   
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-3.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Analisis</h6>
+                                <p class="subtitle">Analizamos segun tus necesidades!</p>
+                            </div>
+                        </div>
+                    </div>                                                    
+                </div> 
+                <div class="col-md-6 col-lg-4 branding">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/confianza.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                      
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-4.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Confianza</h6>
+                                <p class="subtitle">Softwere seguro para todos!</p>
+                            </div>
+                        </div>
+                    </div>                                                      
+                </div> 
+                <div class="col-md-6 col-lg-4 branding">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/sec3.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">          
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-5.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Proteccion</h6>
+                                <p class="subtitle">Tu seguridad es lo mas importante!</p>
+                            </div>
+                        </div>
+                    </div>                                                   
+                </div>
+            </div>   
+        </div>            
+    </section>
+    <!-- End of portfolio section -->
+
+    <!-- Blog Section -->
+    <section class="section" id="blog">
+        <div class="container">
+            <h6 class="section-title mb-0 text-center">Nuestro equipo en accion</h6>
+            <h6 class="section-subtitle mb-5 text-center">Trabajando con profesionalismo y dedicacion</h6>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="assets/imgs/equipo.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Capacitados para todo.</h6>
+                            <p>Trabajando de manera profesional y eficiente.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="assets/imgs/equipo 2.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Trabajadores altamente calificados</h5>
+                            <p>Trabajadores altamente y con experiencia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="assets/imgs/Mejora.jpeg" alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Mejora Continua</h6>
+                            <p>Nuestro equipo esta en continua mejora para la eficiencia de las aplicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Blog Section -->
+
+    <!-- Testmonial Section -->
+    <section class="section" id="testmonial">
+        <div class="container">
+            <h6 class="section-title text-center mb-0">Fundador</h6>
+            <h6 class="section-subtitle mb-5 text-center">Director y fundador de la empresa</h6>
+            <div class="row justify-content-center">
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center mb-3">
+                                <img class="mr-3" src="assets/imgs/yo.jpeg" alt="">
+                                <div class="media-body">
+                                    <h6 class="mt-1 mb-0">Estuardo Mendez</h6>
+                                    <small class="text-muted mb-0">CEO SmartSphere</small>      
+                                </div>
+                            </div>
+                            <p class="mb-0">CEO y fundador de SmartSphere. Estudiante de ingeniería en Sistemas en la Universidad Mariano Gálvez.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Testmonial Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="section has-img-bg pb-0">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 my-3 text-center">
+                    <h6 class="mb-0">Teléfono</h6>
+                    <p class="mb-4">+502 3282 4650</p>
+
+                    <h6 class="mb-0">Ubicación</h6>
+                    <p class="mb-4">Comercial Alux Center, San Lucas Sac.</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">smartsphererob@gmail.com</p>
+                </div>
+                <div class="col-md-7">
+                    <form>
+                        <h4 class="mb-4 text-center">Más Información</h4>
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name" placeholder="Nombre">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input type="email" class="form-control text-white rounded-0 bg-transparent" name="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <textarea name="message" cols="30" rows="4" class="form-control text-white rounded-0 bg-transparent" placeholder="Mensaje"></textarea>
+                        </div>
+                        <div class="form-group col-12 mb-0 text-center">
+                            <button type="submit" class="btn btn-primary rounded w-md mt-3">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+   
+
+    <!-- Page Footer -->
+    <footer class="mt-5 py-4 border-top border-secondary">
+        <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, SmartSphere <a href="aaa" target="_blank">Estuardo Mendez.</a>  Todos los derechos reservados </p>     
+    </footer>
+    <!-- End of Page Footer -->  
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- LeadMark js -->
+    <script src="assets/js/leadmark.js"></script>
+    <script>
+        // Render the PaymentForm React component
+        ReactDOM.render(
+            React.createElement(PaymentForm),
+            document.getElementById('payment-form-container')
+        );
+    </script>
+
+</body>
+</html>
