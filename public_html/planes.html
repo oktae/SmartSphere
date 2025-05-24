@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Planes - SmartSphere</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/leadmark.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* General improvements */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #D1D5DB;
+            background-color: #11292F;
+        }
+
+        .plans-section {
+            background-color: #11292F;
+            color: #ffffff;
+            padding: 60px 0;
+            margin-top: 160px; /* Further increase margin to create more space below the menu */
+        }
+        .plans-section h6 {
+            color: #00bcd4;
+        }
+        .plan-card {
+            background-color: #32444B;
+            border: none;
+            color: #ffffff;
+            padding: 30px; /* Increase padding for better spacing */
+            border-radius: 12px; /* Slightly larger border radius for a polished look */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Add subtle shadow */
+            height: 100%; /* Ensure all cards have the same height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribute content evenly */
+        }
+        .plan-card:hover {
+            transform: scale(1.08); /* Slightly larger hover effect */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+        .plan-card img {
+            display: block; /* Center the image */
+            margin: 0 auto 20px; /* Center horizontally and add spacing below */
+            max-width: 120px; /* Adjust image size for consistency */
+            border-radius: 8px; /* Rounded corners for the image */
+        }
+        .plan-card h5 {
+            font-size: 1.8rem; /* Increase font size for better readability */
+            font-weight: 700; /* Make the title bold */
+            margin-bottom: 15px; /* Add spacing below the title */
+            color: #00bcd4; /* Cyan color for a professional look */
+        }
+        .plan-card p {
+            font-size: 1rem; /* Standardize font size */
+            line-height: 1.6; /* Improve readability with line spacing */
+            margin-bottom: 15px; /* Add spacing below the text */
+            color: #D1D5DB; /* Light gray for a softer look */
+        }
+        .plan-card .btn {
+            background-color: #00bcd4; /* Cyan button */
+            color: #ffffff;
+            font-weight: 600; /* Make button text bold */
+            padding: 10px 20px; /* Add padding for a professional button size */
+            border-radius: 6px; /* Rounded corners for the button */
+        }
+        .plan-card .btn:hover {
+            background-color: #F2451C; /* Orange hover effect */
+            color: #ffffff;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .navbar {
+            background-color: #11292F; /* Add a dark background color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+        }
+        .navbar .nav-link {
+            position: relative;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+            text-decoration: none; /* Ensure no default underline */
+        }
+
+        .navbar .nav-link:hover {
+            color: #00bcd4 !important; /* Cyan text on hover */
+            border-bottom: 2px solid #F2451C; /* Orange underline on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+        .plan-card ul {
+            list-style: none; /* Remove default list styling */
+            padding: 0; /* Remove padding */
+            margin: 0 auto 15px; /* Center the list and add spacing below */
+            text-align: center; /* Center-align the list items */
+        }
+        .plan-card ul li {
+            margin-bottom: 5px; /* Add spacing between list items */
+        }
+        @media (max-width: 768px) {
+            .plan-card {
+                padding: 15px;
+            }
+
+            .plan-card img {
+                max-width: 100px;
+            }
+
+            .plan-card h5 {
+                font-size: 1.2rem;
+            }
+
+            .plan-card p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .plan-card h5 {
+                font-size: 1rem;
+            }
+
+            .plan-card p {
+                font-size: 0.8rem;
+            }
+        }
+
+        footer {
+            background-color: #1A3A40;
+            color: #D1D5DB;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .fade-out {
+            animation: fadeOut 0.5s forwards; /* Fade-out animation */
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s forwards; /* Fade-in animation */
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/imgs/smartsphere-logo.png" alt="" style="width: 350px; height: auto;">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Nuestro Servicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="planes.html">Planes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Line Divider -->
+    <div style="height: 4px; background-color: #F2451C; width: 100%;"></div>
+    <!-- End of Navigation -->
+
+    <section id="plans" class="plans-section">
+        <div class="container">
+  
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="plan-card text-center transform transition duration-500 hover:scale-105">
+                        <img src="assets/imgs/rob1.gif" alt="Plan Básico" class="img-fluid mb-3" style="max-width: 150px; border-radius: 8px;">
+                        <h5>Plan IoT Home</h5>
+                        <ul>
+                            <li>Servicio web</li>
+                            <li>Asesoría básica</li>
+                            <li>Instalación básica</li>
+                        </ul>
+                        <p><strong>Q.700/mes</strong></p>
+                        <button class="btn btn-primary">Seleccionar</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="plan-card text-center transform transition duration-500 hover:scale-105">
+                        <img src="assets/imgs/p2.gif" alt="Plan Estándar" class="img-fluid mb-3" style="max-width: 150px; border-radius: 8px;">
+                        <h5>Plan Smart Home</h5>
+                        <ul>
+                            <li>Servicio web</li>
+                            <li>Asesoría básica</li>
+                            <li>Instalación intermedia</li>
+                            <li>Servicio inmediato y seguridad</li>
+                        </ul>
+                        <p><strong>Q.1,000/mes</strong></p>
+                        <button class="btn btn-primary">Seleccionar</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="plan-card text-center transform transition duration-500 hover:scale-105">
+                        <img src="assets/imgs/p3.gif" alt="Plan Premium" class="img-fluid mb-3" style="max-width: 150px; border-radius: 8px;">
+                        <h5>Plan SSHome</h5>
+                        <ul>
+                            <li>servidor Privado</li>
+                            <li>Asesoría avanzada</li>
+                            <li>Analisis y seguridad inmediata</li>
+                            <li>Servicio inmediato y seguridad</li>
+                        </ul>
+                        <p><strong>Q.1275/mes</strong></p>
+                        <button class="btn btn-primary">Seleccionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="payment" class="plans-section hidden">
+        <div class="container">
+            <div class="w-full max-w-lg bg-white rounded-2xl shadow-xl overflow-hidden mx-auto">
+                <div class="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 sm:p-8 text-white">
+                    <h1 class="text-3xl font-bold mb-2">Detalles de Pago</h1>
+                    <p class="text-indigo-100 opacity-80">Complete su transacción de forma segura</p>
+                </div>
+                <div class="px-6 sm:px-8 pt-8 mb-6 relative">
+                    <!-- Card Display -->
+                    <div class="card-flip relative w-full mx-auto" style="height: 200px; max-width: 340px;">
+                        <div class="card-inner absolute w-full h-full shadow-card hover:shadow-card-hover rounded-2xl transition-shadow duration-300">
+                            <div class="card-front absolute w-full h-full bg-gradient-to-br from-card-dark to-card-light rounded-2xl p-6 shimmer">
+                                <div class="flex justify-between items-start">
+                                    <div class="text-white font-light text-lg tracking-wider">Tarjeta de Crédito</div>
+                                    <div class="text-white text-2xl font-bold italic">VISA</div>
+                                </div>
+                                <div class="mt-6">
+                                    <div class="chip w-12 h-9 rounded-md mb-3"></div>
+                                </div>
+                                <div class="text-white text-xl tracking-widest mb-4 font-light" id="card-number-display">•••• •••• •••• ••••</div>
+                                <div class="flex justify-between text-sm">
+                                    <div>
+                                        <div class="text-white opacity-70 text-xs mb-1">TITULAR</div>
+                                        <div class="text-white tracking-wide" id="card-name-display">SU NOMBRE</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-white opacity-70 text-xs mb-1">EXPIRA</div>
+                                        <div class="text-white tracking-wide"><span id="month-display">MM</span>/<span id="year-display">YY</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back absolute w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl">
+                                <div class="w-full h-12 bg-black mt-5"></div>
+                                <div class="p-6">
+                                    <div class="text-gray-400 text-xs mb-2">CVV</div>
+                                    <div class="flex justify-end mb-2">
+                                        <div class="bg-white w-full h-10 flex items-center justify-end pr-4 rounded">
+                                            <div class="text-gray-800 tracking-widest" id="cvv-display">•••</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-end mt-4">
+                                        <svg class="text-visa-gold fill-current mr-2" width="40" height="12" viewBox="0 0 50 16">
+                                            <path d="M15.22,0.15L9.8,15.57h-3.67l-5.36,-15.42h3.67l3.67,11.46l3.67,-11.46h3.45Z"/>
+                                            <path d="M19.83,15.57l-3.82,-8.19l-1.78,2.37l-1.26,5.82h-3.45l5.36,-15.42h3.45l-3.3,7.43l5.52,-7.43h4.12l-6.73,8.19l3.82,7.23h-4.12Z"/>
+                                        </svg>
+                                        <div class="text-white text-xs">Asegurado por VISA</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 sm:px-8 pb-8 space-y-6">
+                    <!-- Card Number -->
+                    <div class="relative focus-ring">
+                        <input type="text" id="card-number" class="input-field block w-full px-4 pt-6 pb-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-all duration-200" placeholder=" " maxlength="19" oninput="updateCardDisplay()" required />
+                        <label for="card-number" class="input-label absolute left-4 top-4 text-gray-500 text-sm">Número de Tarjeta</label>
+                    </div>
+                    <!-- Card Name -->
+                    <div class="relative focus-ring">
+                        <input type="text" id="card-name" class="input-field block w-full px-4 pt-6 pb-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-all duration-200" placeholder=" " oninput="updateCardDisplay()" required />
+                        <label for="card-name" class="input-label absolute left-4 top-4 text-gray-500 text-sm">Nombre del Titular</label>
+                    </div>
+                    <!-- Expiry Date -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="relative focus-ring">
+                            <input type="number" id="expiry-month" class="input-field block w-full px-4 pt-6 pb-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-all duration-200" placeholder=" " min="1" max="12" oninput="updateCardDisplay()" required />
+                            <label for="expiry-month" class="input-label absolute left-4 top-4 text-gray-500 text-sm">Mes</label>
+                        </div>
+                        <div class="relative focus-ring">
+                            <input type="number" id="expiry-year" class="input-field block w-full px-4 pt-6 pb-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-all duration-200" placeholder=" " min="23" max="35" oninput="updateCardDisplay()" required />
+                            <label for="expiry-year" class="input-label absolute left-4 top-4 text-gray-500 text-sm">Año</label>
+                        </div>
+                    </div>
+                    <!-- CVV -->
+                    <div class="relative focus-ring">
+                        <input type="number" id="cvv" class="input-field block w-full px-4 pt-6 pb-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-all duration-200" placeholder=" " maxlength="3" onfocus="flipCard(true)" onblur="flipCard(false)" oninput="updateCardDisplay()" required />
+                        <label for="cvv" class="input-label absolute left-4 top-4 text-gray-500 text-sm">CVV</label>
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="button" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50" onclick="submitPayment()">Pagar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="mt-5 py-4 border-top border-secondary">
+        <p class="mb-0 small text-center">&copy; <script>document.write(new Date().getFullYear())</script>, SmartSphere. Todos los derechos reservados.</p>
+    </footer>
+    <!-- End of Footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".btn-primary");
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const plansSection = document.getElementById("plans");
+                    const paymentSection = document.getElementById("payment");
+
+                    // Add fade-out animation to plans section
+                    plansSection.classList.add("fade-out");
+
+                    // Wait for the fade-out animation to complete before switching sections
+                    setTimeout(() => {
+                        plansSection.classList.add("hidden");
+                        plansSection.classList.remove("fade-out");
+
+                        // Add fade-in animation to payment section
+                        paymentSection.classList.remove("hidden");
+                        paymentSection.classList.add("fade-in");
+
+                        // Remove fade-in class after animation completes
+                        setTimeout(() => {
+                            paymentSection.classList.remove("fade-in");
+                        }, 500);
+                    }, 500);
+                });
+            });
+        });
+
+        function updateCardDisplay() {
+            const cardNumber = document.getElementById("card-number").value;
+            const cardName = document.getElementById("card-name").value;
+            const expiryMonth = document.getElementById("expiry-month").value;
+            const expiryYear = document.getElementById("expiry-year").value;
+            const cvv = document.getElementById("cvv").value;
+
+            document.getElementById("card-number-display").textContent = cardNumber || "•••• •••• •••• ••••";
+            document.getElementById("card-name-display").textContent = cardName || "SU NOMBRE";
+            document.getElementById("month-display").textContent = expiryMonth || "MM";
+            document.getElementById("year-display").textContent = expiryYear || "YY";
+            document.getElementById("cvv-display").textContent = cvv || "•••";
+        }
+
+        function flipCard(flip) {
+            const card = document.querySelector(".card-flip");
+            if (flip) {
+                card.classList.add("flipped");
+            } else {
+                card.classList.remove("flipped");
+            }
+        }
+
+        function submitPayment() {
+            alert("Pago realizado con éxito. ¡Gracias por su compra!");
+        }
+    </script>
+</body>
+</html>

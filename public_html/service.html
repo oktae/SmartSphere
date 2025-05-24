@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nuestro Servicio - SmartSphere</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/leadmark.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #11292F !important; /* Set entire page background to #11292F */
+            color: #D1D5DB; /* Ensure text is readable */
+            padding-top: 80px;
+            font-family: 'Roboto', sans-serif;
+        }
+        h6, p, .navbar .nav-link, .section-title {
+            color: #D1D5DB !important; /* Ensure text matches the new background */
+        }
+        .navbar {
+            background-color: #11292F !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .nav-link {
+            position: relative;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .navbar .nav-link:hover {
+            color: #F2451C !important; /* Orange text on hover */
+            border-bottom: 2px solid #F2451C; /* Orange underline on hover */
+        }
+        .navbar-toggler {
+            border-color: #F2451C; /* Orange border for toggler */
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28242,69,28,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .navbar-collapse {
+            background-color: #11292F; /* Match dropdown background to navbar */
+        }
+        .navbar-collapse .nav-link {
+            color: #D1D5DB !important; /* Ensure dropdown links are readable */
+        }
+        .navbar-collapse .nav-link:hover {
+            color: #F2451C !important; /* Orange text on hover */
+            border-bottom: 2px solid #F2451C; /* Orange underline on hover */
+        }
+        .card {
+            background-color: #11292F; /* Match card background to page */
+            border: none;
+            color: #D1D5DB; /* Ensure text is readable */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #00bcd4; /* Accent color for section titles */
+        }
+        .section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #11292F; /* Soft gray for paragraph text */
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00bcd4; /* Accent color for card titles */
+        }
+        .card p {
+            font-size: 1rem;
+            color: #11292F; /* Soft gray for card descriptions */
+        }
+        .shadow-lg {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .section {
+            background-color: #11292F; /* Match section background to page */
+            padding: 60px 0;
+        }
+        footer {
+            background-color: #1A3A40; /* Add background color to footer */
+            color: #D1D5DB; /* Ensure text is readable */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Remove existing animations */
+        .fade-in, .slide-up, .zoom-in {
+            animation: none;
+        }
+
+        @media (max-width: 768px) {
+            .card img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+
+            .card p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-title {
+                font-size: 1rem;
+            }
+
+            .card p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/imgs/smartsphere-logo.png" alt="" style="width: 350px; height: auto; filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">                     
+                    <li class="nav-item">
+                        <a class="nav-link active" href="service.html">Nuestro Servicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planes.html">Planes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4 shadow-lg transform transition duration-500 hover:scale-105">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Automatización de Hogares</h6>
+                            <p>Integramos tecnología avanzada para automatizar tareas del hogar, mejorando tu calidad de vida.</p>
+                            <img src="assets/imgs/casa1.gif" alt="Automatización de Hogares" class="rounded-lg transition duration-500 hover:scale-110">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4 shadow-lg transform transition duration-500 hover:scale-105">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Seguridad Inteligente</h6>
+                            <p>Sistemas de monitoreo y seguridad para proteger tu hogar con tecnología de última generación.</p>
+                            <img src="assets/imgs/casa2.gif" alt="Seguridad Inteligente" class="rounded-lg transition duration-500 hover:scale-110">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4 shadow-lg transform transition duration-500 hover:scale-105">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Asistencia Personal</h6>
+                            <p>Robots asistentes diseñados para ayudar a personas mayores o con movilidad reducida.</p>
+                            <img src="assets/imgs/casa3.gif" alt="Asistencia Personal" class="rounded-lg transition duration-500 hover:scale-110">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4 shadow-lg transform transition duration-500 hover:scale-105">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Variedad</h6>
+                            <p>Robots asistentes diseñados exclusivamente para tareas del hogar: limpieza, organización, monitoreo del hogar, y más.</p>
+                            <img src="assets/imgs/gif8.gif" alt="Variedad" class="rounded-lg transition duration-500 hover:scale-110">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4 shadow-lg transform transition duration-500 hover:scale-105">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Calidad</h6>
+                            <p>Integración de inteligencia artificial avanzada y materiales duraderos adaptados a uso doméstico.</p>
+                            <img src="assets/imgs/c1.gif" alt="Calidad" class="rounded-lg transition duration-500 hover:scale-110">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4 shadow-lg transform transition duration-500 hover:scale-105">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Características</h6>
+                            <p>Reconocimiento de voz, rutinas adaptativas, conexión con otros dispositivos inteligentes, diseño compacto y elegante.</p>
+                            <img src="assets/imgs/iot12.gif" alt="Características" class="rounded-lg transition duration-500 hover:scale-110">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 SmartSphere. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

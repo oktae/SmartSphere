@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SmartSphere Redes Sociales</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General improvements */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #D1D5DB;
+            background-color: #11292F;
+            margin-right: 0; /* Remove margin for vertical navbar */
+            padding-top: 90px; /* Increase padding to create more space below the menu */
+        }
+
+        .navbar {
+            background-color: #11292F !important;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            border-bottom: none; /* Remove any border causing the orange line */
+            box-shadow: none; /* Remove shadow if present */
+        }
+        .navbar .navbar-brand {
+            margin-bottom: 0;
+        }
+        .navbar .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        .navbar .nav-item {
+            margin-bottom: 0;
+        }
+        .navbar .nav-link {
+            text-align: center;
+            color: #ffffff !important;
+            font-weight: 500;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding: 5px 10px;
+        }
+        .navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #F2451C;
+            transition: width 0.3s ease;
+        }
+        .navbar .nav-link:hover::after,
+        .navbar .nav-link.active::after {
+            width: 100%;
+        }
+        .navbar .nav-link.active {
+            color: #F2451C !important;
+        }
+        .navbar-brand img {
+            width: 200px;
+            height: auto;
+        }
+        .navbar-toggler {
+            display: none;
+            background-color: #F2451C;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .navbar-toggler-icon {
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            display: block;
+            margin: 5px 0;
+        }
+        .social-card {
+            background-color: #32444B;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .social-card:hover {
+            transform: scale(1.05);
+            background-color: #F2451C;
+        }
+        .social-card h6, .social-card p, .social-card i {
+            color: #00bcd4;
+            transition: color 0.3s ease;
+        }
+        .social-card:hover h6, .social-card:hover p, .social-card:hover i {
+            color: #ffffff;
+        }
+        .social-card i {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        .social-preview {
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .social-preview iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        footer {
+            background-color: #1A3A40;
+            color: #D1D5DB;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .social-card {
+                padding: 10px;
+            }
+
+            .social-card i {
+                font-size: 40px;
+            }
+
+            .social-preview iframe {
+                height: 200px;
+            }
+
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #11292F;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 10px 20px;
+                z-index: 999;
+            }
+
+            .navbar-nav.show {
+                display: flex;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .social-card h6 {
+                font-size: 1rem;
+            }
+
+            .social-card p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .section {
+            margin-top: 20px; /* Add extra margin to separate the section from the navbar */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar custom-navbar navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="assets/imgs/smartsphere-logo.png" alt="SmartSphere Logo">
+        </a>
+        <button class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="service.html">Nuestro Servicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contáctanos</a></li>
+            <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
+        </ul>
+    </nav>
+    <!-- End of Navigation -->
+
+    <!-- Redes Sociales Section -->
+    <section class="section">
+        <div class="container">
+            <h6 class="section-title text-center">Nuestras Redes Sociales</h6>
+            <h6 class="section-subtitle mb-5 text-center">Conéctate con nosotros a través de nuestras plataformas</h6>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="social-card text-center">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                        <h6>Facebook</h6>
+                        <p>Síguenos en Facebook para más actualizaciones.</p>
+                    </a>
+                    <div class="social-preview">
+                        <iframe src="https://www.facebook.com" title="Facebook Homepage"></iframe>
+                    </div>
+                </div>
+                <div class="social-card text-center">
+                    <a href="https://www.instagram.com/smartsphere_home?utm_source=qr&igsh=Njk1cnN3cGlqNnh2" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <h6>Instagram</h6>
+                        <p>Explora nuestras historias y publicaciones.</p>
+                    </a>
+                    <div class="social-preview">
+                        <iframe src="https://www.instagram.com/smartsphere_home" title="Instagram Homepage"></iframe>
+                    </div>
+                </div>
+                <div class="social-card text-center">
+                    <a href="https://www.tiktok.com/@smartsphere_robotics?_t=ZM-8wWptq7qhuv&_r=1" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                        <h6>TikTok</h6>
+                        <p>Descubre contenido divertido y creativo.</p>
+                    </a>
+                    <div class="social-preview">
+                        <iframe src="https://www.tiktok.com/@smartsphere_robotics" title="TikTok Homepage"></iframe>
+                    </div>
+                </div>
+                <div class="social-card text-center">
+                    <a href="https://wa.me/qr/4HMSY2ZDWUL7I1" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <h6>WhatsApp</h6>
+                        <p>Contáctanos directamente por WhatsApp.</p>
+                    </a>
+                    <div class="social-preview">
+                        <iframe src="https://web.whatsapp.com" title="WhatsApp Homepage"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2023 SmartSphere. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggler = document.querySelector(".navbar-toggler");
+            const navMenu = document.querySelector(".navbar-nav");
+
+            toggler.addEventListener("click", function () {
+                navMenu.classList.toggle("show");
+            });
+        });
+    </script>
+</body>
+</html>
